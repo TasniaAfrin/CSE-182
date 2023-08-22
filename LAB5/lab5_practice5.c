@@ -1,0 +1,21 @@
+/** to find all prime numbers between 1 to n**/
+#include<stdio.h>
+void main()
+{
+int i, num, n, count;
+printf("Enter the n:\n");
+scanf("%d", &n);
+printf("The prime number between 1 to n:\n");
+for(num=1; num<=n; num++){
+    count = 0;
+    for(i=2; i<=num/2; i++){
+        if(num%i == 0){
+            count++;
+            break;
+        }
+    }
+    if(count == 0 && num != 1)
+        printf("%d\t", num);
+}
+}
+
